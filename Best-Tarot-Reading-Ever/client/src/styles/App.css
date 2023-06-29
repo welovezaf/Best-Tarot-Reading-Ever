@@ -1,0 +1,86 @@
+:root {
+  --background-gradient-overlay: linear-gradient(
+    115deg,
+    rgba(0, 0, 0, 0.5),
+    rgba(10, 0, 20, 0.5)
+  );
+  --background-image: url("../../public/images/bg.jpg");
+  --app-background-gradient-overlay: rgba(4, 0, 25, 0.7);
+  --border-radius: 10px;
+  --text-color: #e0d6f5;
+}
+
+body {
+  background: var(--background-gradient-overlay), var(--background-image);
+  background-size: cover;
+}
+
+.App {
+  width: 80%;
+  display: block;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  margin: auto auto;
+}
+
+.header,
+.app-body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--app-background-gradient-overlay);
+  border-radius: 10px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  color: var(--text-color);
+}
+
+.header {
+  flex-direction: column;
+  font-size: calc(10px + 2vmin);
+  margin-bottom: 10px;
+}
+
+.app-body {
+  min-height: 400px;
+  padding: 20px;
+}
+
+.action-btn {
+  border-radius: 10px;
+  font-size: large;
+}
+
+.action-btn:hover {
+  background: #e0d6f5;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+@keyframes card-selected {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(90deg);
+  }
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

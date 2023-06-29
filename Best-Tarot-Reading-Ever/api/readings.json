@@ -1,0 +1,9 @@
+{
+    "readings": [
+        {
+            "min_score": 0,
+            "max_score": 0,
+            "description": "This is a test reading."
+        }
+    ]
+}

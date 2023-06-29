@@ -1,5 +1,6 @@
 import time
 import json
+# from helpers import get_all_cards
 from flask import Flask, render_template
 
 app = Flask(__name__)
@@ -24,3 +25,12 @@ def get_card(index):
     data = json.load(f)
     card = data["cards"][index]
     return card
+
+# @app.route('/cards/<list:indices_list>')
+# def get_cards_from_list(indicies_list):
+#     deck = get_all_cards()
+#     cards_list = []
+#     for i in indicies_list:
+#         cards_list.append(deck["cards"][i])
+#     return cards_list
+

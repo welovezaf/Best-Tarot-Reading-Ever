@@ -1,0 +1,75 @@
+:root {
+  --spread-width: 400px;
+  --card-width: 100px;
+  --card-height: calc(1.4 * var(--card-width));
+  --card-overlap-margin: calc(-1 * ((var(--card-width) - 10px)));
+}
+
+.deck,
+.card-spread,
+.card-row {
+  width: 100;
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.deck {
+  flex-direction: column;
+  overflow: hidden;
+  margin: auto auto;
+}
+
+.deck > .card-spread {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 10px;
+  margin: 10px;
+}
+
+.card-spread > .card:first-child {
+  margin-left: 0px;
+}
+
+.card-spread > .card:last-child {
+  min-width: var(--card-width);
+  overflow: visible;
+}
+
+.card {
+  position: static;
+  z-index: 1;
+  width: var(--card-width);
+  height: var(--card-height);
+  border: 2px solid black;
+  background: rgb(254, 250, 255);
+  color: black;
+  font-weight: 500;
+  transition-duration: 0.1s;
+}
+
+.card-spread > .card {
+  margin-left: var(--card-overlap-margin);
+}
+
+.card:hover {
+  border: 2px solid rgb(255, 255, 100);
+}
+
+.card-back {
+  background: url("../../public/images/card-back.png");
+  background-size: cover;
+}
+
+.card-selected {
+  transform: translate(0px, -20px);
+}
+
+.card-rejected {
+  transform: translate(-500px, 0px);
+  transition-duration: 1s;
+}
